@@ -17,26 +17,34 @@ The CI/CD pipeline consists of two separate pieces: (1) A CI pipeline implemente
 
 The steps for running the CI/CD pipeline to build and deploy the application are:
 
-(1) Create (or log into your Azure account).
+(1) Fork the Github repository for the project 
 
-(2) Enter Azure Shell.
+Navigate to the repository github.com/sgriesmer/azure-pipeline.git.
+Specify the name and choose the project where you want the fork created.
+Choose Fork to create the fork.
 
-(3) Create a Github repository for the project.  
+(2) Create (or log into your Azure account)
 
-Enable Azure Pipelines
+(3) Start the Azure Cloud Shell as a workspace
 
-(4) Clone the project from Github
+(4) Clone the project from Github on Azure Cloud Shell
+
+Create a working directory.
 
 Execute the command:
 
-git clone https://github.com/sgriesmer/azure-pipeline.git
+git clone <your repo>
 
-(5) Create a Python virtual environment
+![Starter Files from git clone](/images/"starter files from git clone".png)
 
-python3 -m env ~/.myrepo
+(5) Create a Python virtual environment on Azure Cloud Shell
+
+Type the following commands into the shell:
+
+python3 -m venv ~/.myrepo
 source ~/.myrepo/bin/activate
 
-(6) Install, lint, and test the application locally
+(6) Install, lint, and test the application locally on Azure Cloud Shell
 
 Execute the command:
 
@@ -48,39 +56,66 @@ Any code changes should pass tests.  The output of a successful test run should 
 
 ![Test results after make all](/images/"screen slot of passed tests after make all".png)
 
-(5) Push code to Github and verify that lint and test pass remotely
+(7) Start webapp to test remotely
 
-Execute the commmands:
+Execute the command:
+
+az webapp up -n azure-pipeline-ws-sjg
+
+You should see the project running on the app service through the Azure Portal:
+
+![web app in azure portal](/images/"azure-pipeline-ws in azure portal".png)
+
+(8) Test the successful deployment of the application by requesting a predication of a median housing price
+
+Execute the command:
+
+./make_predict_azure_app.sh
+
+You should see the output:
+
+![prediction from web app](/images/"prediction from web app".png)
+
+(9) Set up a pipeline with Azure Pipelines to deploy the application
+
+Select New Pipeline
+Select GitHub
+Select Github Repository with code
+Select Python to Linux Web App on Azure
+Select Azure subscription
+Authenticate with Azure
 
 
+(10) Upload application to Github repository to trigger a build remotely as well as a deployment through Azure Pipelines
 
-(6) 
+Make small non-impacting change to app.py file (e.g., add spaces to header)
 
+git add app.py
+git commit -m "cosmetic change to app.py to test build"
+git push
 
-<TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
+In Azure Pipelines, you should see a screen like:
 
-* Project running on Azure App Service
+![build and deploy from Azure DevOps](/images/"pipeline build and deploy from Azure DevOps".png)
 
-* Project cloned into Azure Cloud Shell
+In Github, you should see a screen like this for build job:
 
-* Passing tests that are displayed after running the `make all` command from the `Makefile`
+![build job from git hub](/images/"build job from git hub".png)
 
-* Output of a test run
+(11) Test the successful deployment of the application by requesting a predication of a median housing price
 
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
+Execute the command:
 
-* Running Azure App Service from Azure Pipelines automatic deployment
+./make_predict_azure_app.sh
 
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
-The output should look similar to this:
+You should see the output:
 
-```bash
-udacity@Azure:~$ ./make_predict_azure_app.sh
-Port: 443
-{"prediction":[20.35373177134412]}
-```
+![prediction from web app](/images/"prediction from web app".png)
 
-* Output of streamed log files from deployed application
+(12) The output of the tailed log file should look like:
+
+![tailed log file](/images/"tailed log file".png)
+
 
 > 
 
@@ -91,5 +126,6 @@ Port: 443
 ## Demo 
 
 <TODO: Add link Screencast on YouTube>
+
 
 
