@@ -54,7 +54,7 @@ to install, lint, and test the application into the Github repository.
 
 Any code changes should pass tests.  The output of a successful test run should look like:
 
-![Test results after make all](/images/"screen slot of passed tests after make all".png)
+![Test results after make all](/images/screen-slot-of-passed-tests-after-make-all.png)
 
 (7) Start webapp to test remotely
 
@@ -64,7 +64,7 @@ az webapp up -n azure-pipeline-ws-sjg
 
 You should see the project running on the app service through the Azure Portal:
 
-![web app in azure portal](/images/"azure-pipeline-ws in azure portal".png)
+![web app in azure portal](/images/azure-pipeline-ws-in-azure-portal.png)
 
 (8) Test the successful deployment of the application by requesting a predication of a median housing price
 
@@ -74,7 +74,7 @@ Execute the command:
 
 You should see the output:
 
-![prediction from web app](/images/"prediction from web app".png)
+![prediction from web app](/images/prediction-from-web-app.png)
 
 (9) Set up a pipeline with Azure Pipelines to deploy the application
 
@@ -96,11 +96,11 @@ git push
 
 In Azure Pipelines, you should see a screen like:
 
-![build and deploy from Azure DevOps](/images/"pipeline build and deploy from Azure DevOps".png)
+![build and deploy from Azure DevOps](/images/pipeline-build-and-deploy-from-Azure-DevOps.png)
 
 In Github, you should see a screen like this for build job:
 
-![build job from git hub](/images/"build job from git hub".png)
+![build job from git hub](/images/build-job-from-git-hub.png)
 
 (11) Test the successful deployment of the application by requesting a predication of a median housing price
 
@@ -110,11 +110,11 @@ Execute the command:
 
 You should see the output:
 
-![prediction from web app](/images/"prediction from web app".png)
+![prediction from web app](/images/prediction-from-web-app.png)
 
 (12) The output of the tailed log file should look like:
 
-![tailed log file](/images/"tailed log file".png)
+![tailed log file](/images/tailed-log-file.png)
 
 
 > 
