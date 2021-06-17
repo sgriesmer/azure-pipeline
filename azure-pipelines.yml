@@ -47,6 +47,15 @@ stages:
       workingDirectory: $(projectRoot)
       displayName: "Install requirements"
 
+    - script: |
+        python -m venv antenv
+        source antenv/bin/activate
+        pip install pylint
+        make install
+        make lint
+      workingDirectory: $(projectRoot)
+      displayName: "Run lint on code"
+
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
