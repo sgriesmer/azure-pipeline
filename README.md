@@ -96,11 +96,11 @@ git push
 
 In Azure Pipelines, you should see a screen like:
 
-![build and deploy from Azure DevOps](/images/pipeline-build-and-deploy-from-Azure-DevOps.png)
+![build and deploy from Azure DevOps](/images/pipeline-build-and-destroy-from-azure-devops.png)
 
 In Github, you should see a screen like this for build job:
 
-![build job from git hub](/images/build-job-from-git-hub.png)
+![build job from git hub](/images/build-job-from-github.png)
 
 (11) Test the successful deployment of the application by requesting a predication of a median housing price
 
