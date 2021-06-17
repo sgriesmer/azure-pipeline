@@ -35,7 +35,7 @@ Execute the command:
 
 git clone <your repo>
 
-![Starter Files from git clone](/images/"starter files from git clone".png)
+![Starter Files from git clone](/images/starter-files-from-git-clone.png)
 
 (5) Create a Python virtual environment on Azure Cloud Shell
 
