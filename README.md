@@ -33,7 +33,7 @@ Create a working directory.
 
 Execute the command:
 
-git clone <your repo>
+    git clone <your repo>
 
 ![Starter Files from git clone](/images/starter-files-from-git-clone.png)
 
@@ -41,26 +41,26 @@ git clone <your repo>
 
 Type the following commands into the shell:
 
-python3 -m venv ~/.myrepo
-source ~/.myrepo/bin/activate
+    python3 -m venv ~/.myrepo
+    source ~/.myrepo/bin/activate
 
 (6) Install, lint, and test the application locally on Azure Cloud Shell
 
 Execute the command:
 
-make all
+    make all
 
 to install, lint, and test the application into the Github repository.
 
 Any code changes should pass tests.  The output of a successful test run should look like:
 
-![Test results after make all](/images/screen-slot-of-passed-tests-after-make-all.png)
+![Test results after make all](/images/test-results-after-make-all.png)
 
 (7) Start webapp to test remotely
 
 Execute the command:
 
-az webapp up -n azure-pipeline-ws-sjg
+    az webapp up -n azure-pipeline-ws-sjg
 
 You should see the project running on the app service through the Azure Portal:
 
@@ -70,7 +70,7 @@ You should see the project running on the app service through the Azure Portal:
 
 Execute the command:
 
-./make_predict_azure_app.sh
+    ./make_predict_azure_app.sh
 
 You should see the output:
 
@@ -90,9 +90,9 @@ Authenticate with Azure
 
 Make small non-impacting change to app.py file (e.g., add spaces to header)
 
-git add app.py
-git commit -m "cosmetic change to app.py to test build"
-git push
+    git add app.py
+    git commit -m "cosmetic change to app.py to test build"
+    git push
 
 In Azure Pipelines, you should see a screen like:
 
