@@ -106,7 +106,7 @@ In Github, you should see a screen like this for build job:
 
 Execute the command:
 
-./make_predict_azure_app.sh
+    ./make_predict_azure_app.sh
 
 You should see the output:
 
@@ -116,8 +116,6 @@ You should see the output:
 
 ![tailed log file](/images/tailed-log-file.png)
 
-
-> 
 
 ## Enhancements
 
