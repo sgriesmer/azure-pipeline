@@ -7,7 +7,7 @@ The project plan for the pipeline is described in a Trello board and spreadsheet
 
 Trello Board: https://urldefense.com/v3/__https://trello.com/b/fPufDYN5/azure-pipeline__;!!BhdT!1tKzq60elvX4JeWiTR_IXuGxxPS_GZg2Vrom05KtOiEh6-HJkbvgRfM7$
 
-Spreadsheet: * A link to a spreadsheet that includes the original and final project plan>
+Spreadsheet: ![Project Management spreadsheet](project-management-template-sjg.xlsx)
 
 ## Instructions
 
@@ -115,6 +115,12 @@ You should see the output:
 (12) The output of the tailed log file should look like:
 
 ![tailed log file](/images/tailed-log-file.png)
+
+(13) Running a load test using locust with 1 test client with 3 users generated the following output:
+
+![locust testing](/images/locust-testing.png)
+
+![locust chart](/images/locust-chart.png)
 
 
 ## Enhancements
