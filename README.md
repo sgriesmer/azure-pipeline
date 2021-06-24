@@ -125,11 +125,14 @@ You should see the output:
 
 ## Enhancements
 
-<TODO: A short description of how to improve the project in the future>
+This project could be enhanced in the following ways:
+
+(1) Use Azure Pipelines for the build and deployment rather than both Github Actions and Azure Pipelines.  It would make it simpler and easier to maintain.
+(2) Link in a Jupyter notebook for the Boston Housing ML model as another pipeline, deploying the joblib or a pickle file to Github and then doing the application build and deploy.
 
 ## Demo 
 
-<TODO: Add link Screencast on YouTube>
+Demo: https://youtu.be/ie-ZZSrkgEE
 
 
 
