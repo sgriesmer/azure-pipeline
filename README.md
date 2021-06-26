@@ -110,6 +110,10 @@ In Azure Portal, you should see the web app deployed:
 
 ![running app in Azure Portal ](/images/running-web-app-in-azure-portal.png)
 
+In Azure Pipelines, you should also see that the application deployed:
+
+![deployment in Azure Pipelines](/images/screen-shot-deployment-ap.png)
+
 (11) Test the successful deployment of the application by requesting a predication of a median housing price
 
 Execute the command:
