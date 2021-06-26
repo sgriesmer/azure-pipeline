@@ -78,12 +78,12 @@ You should see the output:
 
 (9) Set up a pipeline with Azure Pipelines to deploy the application
 
-Select New Pipeline
-Select GitHub
-Select Github Repository with code
-Select Python to Linux Web App on Azure
-Select Azure subscription
-Authenticate with Azure
+    Select New Pipeline
+    Select GitHub
+    Select Github Repository with code
+    Select Python to Linux Web App on Azure
+    Select Azure subscription
+    Authenticate with Azure
 
 
 (10) Upload application to Github repository to trigger a build remotely as well as a deployment through Azure Pipelines
@@ -96,11 +96,15 @@ Make small non-impacting change to app.py file (e.g., add spaces to header)
 
 In Azure Pipelines, you should see a screen like:
 
-![build and deploy from Azure DevOps](/images/pipeline-build-and-destroy-from-azure-devops.png)
+![build and deploy from Azure DevOps](/images/successful-pipeline-run-in-Azure-Pipelines-with-url.png)
 
 In Github, you should see a screen like this for build job:
 
 ![build job from git hub](/images/build-job-from-github.png)
+
+In Azure Portal, you should see the web app deployed:
+
+![running app in Azure Portal ](/images/running-web-app-in-azure-portal.png)
 
 (11) Test the successful deployment of the application by requesting a predication of a median housing price
 
@@ -118,9 +122,13 @@ You should see the output:
 
 (13) Running a load test using locust with 1 test client with 3 users generated the following output:
 
-![locust testing](/images/locust-testing.png)
+(a) Load test of get function for the application:
 
-![locust chart](/images/locust-chart.png)
+![locust get testing](/images/locust-get-load-test.png)
+
+(b) Load test of post /predict function for the application:
+
+![locust post testing](/images/locust-post-predict-load-test.png)
 
 
 ## Enhancements
