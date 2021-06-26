@@ -102,6 +102,10 @@ In Github, you should see a screen like this for build job:
 
 ![build job from git hub](/images/build-job-from-github.png)
 
+The Github Actions badge should show that the build job passed its tests:
+
+[![Actions Status](https://github.com/sgriesmer/azure-pipeline/workflows/Python%20application%20test%20with%20Github%20Actions/badge.svg)](https://github.com/sgriesmer/azure-pipeline/actions)
+
 In Azure Portal, you should see the web app deployed:
 
 ![running app in Azure Portal ](/images/running-web-app-in-azure-portal.png)
