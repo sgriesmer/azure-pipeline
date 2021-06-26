@@ -1,0 +1,56 @@
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 126-947-559
+127.0.0.1 - - [19/Jun/2021 18:42:12] "GET /tests HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jun/2021 18:42:56] "[35m[1mPOST /tests HTTP/1.1[0m" 204 -
+127.0.0.1 - - [19/Jun/2021 18:43:29] "GET /tests HTTP/1.1" 200 -
+ * Detected change in '/home/stephen/.myrepo/lib/python3.7/site-packages/flask/json/__init__.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 126-947-559
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+Traceback (most recent call last):
+  File "app/app.py", line 23, in <module>
+    app.run(debug=True)  
+  File "/home/stephen/.myrepo/lib/python3.7/site-packages/flask/app.py", line 990, in run
+    run_simple(host, port, self, **options)
+  File "/home/stephen/.myrepo/lib/python3.7/site-packages/werkzeug/serving.py", line 982, in run_simple
+    s.bind(server_address)
+OSError: [Errno 98] Address already in use
+127.0.0.1 - - [19/Jun/2021 18:50:16] "GET /tests HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/stephen/.myrepo/bin/locust", line 8, in <module>
+    sys.exit(main())
+  File "/home/stephen/.myrepo/lib/python3.7/site-packages/locust/main.py", line 125, in main
+    docstring, user_classes, shape_class = load_locustfile(locustfile)
+  File "/home/stephen/.myrepo/lib/python3.7/site-packages/locust/main.py", line 81, in load_locustfile
+    imported = source.load_module()
+  File "<frozen importlib._bootstrap_external>", line 407, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 907, in load_module
+  File "<frozen importlib._bootstrap_external>", line 732, in load_module
+  File "<frozen importlib._bootstrap>", line 265, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/stephen/locust-test/locustfile.py", line 17, in <module>
+    class WebsiteUser(HttpLocust):
+  File "/home/stephen/.myrepo/lib/python3.7/site-packages/locust/util/deprecation.py", line 27, in __new__
+    raise ImportError(deprecation_message)
+ImportError: The HttpLocust class has been renamed to HttpUser in version 1.0. For more info see: https://docs.locust.io/en/latest/changelog.html#changelog-1-0
+/home/stephen/.myrepo/lib/python3.7/site-packages/locust/util/deprecation.py:17: DeprecationWarning: Usage of User.task_set is deprecated since version 1.0. Set the tasks attribute instead (tasks = [UserBehavior])
+  DeprecationWarning,
+[2021-06-19 19:06:59,347] cc-ba4539d6-67d94ddcdc-t82jd/WARNING/locust.main: System open file limit '1024' is below minimum setting '10000'. It's not high enough for load testing, and the OS didn't allow locust to increase it by itself. See https://github.com/locustio/locust/wiki/Installation#increasing-maximum-number-of-open-files-limit for more info.
+[2021-06-19 19:06:59,347] cc-ba4539d6-67d94ddcdc-t82jd/INFO/locust.main: Starting web interface at http://0.0.0.0:8089 (accepting connections from all network interfaces)
+[2021-06-19 19:06:59,353] cc-ba4539d6-67d94ddcdc-t82jd/INFO/locust.main: Starting Locust 1.5.3
+[2021-06-19 19:06:59,361] cc-ba4539d6-67d94ddcdc-t82jd/INFO/root: Terminal was not a tty. Keyboard input disabled
