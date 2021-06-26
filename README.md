@@ -96,7 +96,7 @@ Make small non-impacting change to app.py file (e.g., add spaces to header)
 
 In Azure Pipelines, you should see a screen like:
 
-![build and deploy from Azure DevOps](/images/pipeline-build-and-destroy-from-azure-devops.png)
+![build and deploy from Azure DevOps](/images/successful-pipeline-run-in-Azure-Pipelines-with-url.png)
 
 In Github, you should see a screen like this for build job:
 
