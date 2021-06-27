@@ -5,7 +5,7 @@ The purpose of this project is to create a Continuous Integration/Continuous Del
 ## Project Plan
 The project plan for the pipeline is described in a Trello board and spreadsheet:
 
-Trello Board: https://urldefense.com/v3/__https://trello.com/b/fPufDYN5/azure-pipeline__;!!BhdT!1tKzq60elvX4JeWiTR_IXuGxxPS_GZg2Vrom05KtOiEh6-HJkbvgRfM7$
+Trello Board: https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftrello.com%2Fb%2FfPufDYN5%2Fazure-pipeline&data=04%7C01%7C%7C1d781d84f0fe4e75696108d93912b205%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C637603574718249973%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=H4Hph4JJcDXtRJ2Uv4tCXe%2Bds1%2BDiMtHqxOKEeM6PA0%3D&reserved=0
 
 Spreadsheet: ![Project Management spreadsheet](project-management-template-sjg.xlsx)
 
