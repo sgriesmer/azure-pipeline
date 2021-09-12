@@ -1,4 +1,8 @@
-# Overview
+# DevOps Engineer for Microsoft Azure Nanodegree Program
+
+## Project: Building a CI/CD pipeline
+
+## Overview
 
 The purpose of this project is to create a Continuous Integration/Continuous Delivery (CI/CD) pipeline for a Python Machine Learning Flask application.  The application returns a prediction of a median housing price of a house in the Boston area given a set of input variables.
 
